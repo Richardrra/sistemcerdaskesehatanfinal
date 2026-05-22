@@ -326,9 +326,11 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 image_path = "assets/logosistempakar.png"
+
 if os.path.exists(image_path):
     img_b64 = get_base64_of_bin_file(image_path)
-    img_tag  = f'<img class="hero-img" src="data:image/png;base64,{img_b64}" alt="LOGO">'
+    # Hapus st.image, dan masukkan width="250" ke dalam img_tag HTML ini:
+    img_tag = f'<img class="hero-img" src="data:image/png;base64,{img_b64}" alt="LOGO" width="250">'
 else:
     img_tag = '<div style="font-size:110px;text-align:center;line-height:1;">🩺</div>'
 
