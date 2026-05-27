@@ -40,7 +40,7 @@ Berikut adalah panduan langkah demi langkah untuk menggunakan sistem pakar ini:
 
 ### Langkah 1: Proses Otentikasi (Login)
 * Buka menu **Login** di halaman navigasi.
-* Masukkan kredensial (Username & Password) yang telah didaftarkan pada sistem untuk membuka akses penuh ke modul diagnosa.
+* Masukkan kredensial (Username & Password) **(username : admin , password : admin123 ) ** yang telah didaftarkan pada sistem untuk membuka akses penuh ke modul diagnosa.
 
 ### Langkah 2: Memilih Gejala
 * Masuk ke modul **Mulai Diagnosa**.
