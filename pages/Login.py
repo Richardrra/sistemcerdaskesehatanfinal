@@ -1,7 +1,7 @@
 import streamlit as st
 from auth_helper import login_form
 
-st.set_page_config(page_title="Login", page_icon="🔑")
+st.set_page_config(page_title="Login")
 
 # Panggil fungsi login yang sudah kamu buat
 if login_form():
