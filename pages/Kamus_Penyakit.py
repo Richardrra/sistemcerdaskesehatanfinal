@@ -103,7 +103,7 @@ def get_disease_symptoms(csv_path):
         st.error(f"Error memuat data: {e}")
         return {}
 
-st.title(" Kamus Penyakit")
+st.title("Kamus Penyakit")
 st.write("Informasi daftar penyakit dan gejala terkait dalam Bahasa Indonesia.")
 
 kamus_data = get_disease_symptoms('data.zip')
