@@ -118,8 +118,8 @@ if kamus_data:
     col1, col2 = st.columns(2)
     for i, g in enumerate(gejala_list):
         if i % 2 == 0:
-            with col1: st.markdown(f"🔹 {g}")
+            with col1: st.markdown(f"-{g}")
         else:
-            with col2: st.markdown(f"🔹 {g}")
+            with col2: st.markdown(f"-{g}")
 else:
     st.error("Gagal memuat data dari file data.zip")
