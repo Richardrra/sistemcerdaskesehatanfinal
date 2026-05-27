@@ -8,7 +8,7 @@ if not login_form():
     st.stop()
 
 
-# 1. INJEKSI CSS CUSTOM (Gaya VR-Real)
+# css
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
@@ -60,7 +60,7 @@ try:
     df[target_col] = df[target_col].str.lower().str.strip()
     penyakit_indonesia = list(TERJEMAHAN_PENYAKIT.keys())
 
-    # Terapkan filter penyakit target
+    # filter penyakit target
     df_filtered = df[df[target_col].isin(penyakit_indonesia)]
     
     # Jika kosong, jalankan fallback 10 terbanyak
@@ -69,7 +69,7 @@ try:
         top_10 = df[target_col].value_counts().nlargest(10).index
         df_filtered = df[df[target_col].isin(top_10)]
 
-    # --- PERBAIKAN TABEL: Menggunakan .sample() agar muncul acak ---
+   
     st.subheader("1. Cuplikan Data Latih (Raw Data)")
     st.write("Berikut adalah 10 baris data yang diambil secara **acak** dari dataset:")
     # Jika data kurang dari 10, tampilkan semua. Jika lebih, ambil acak 10 baris.
