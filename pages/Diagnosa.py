@@ -4,17 +4,15 @@ from datetime import datetime
 from auth_helper import login_form
 from db_helper import init_db, simpan_ke_db
 
-# 1. SET CONFIG (HARUS PALING ATAS)
-st.set_page_config(page_title="Diagnosa", page_icon="🩺", layout="wide")
 
-# 2. INISIALISASI DB
+st.set_page_config(page_title="Diagnosa", layout="wide")
+
 init_db()
 
-# 3. CEK LOGIN
 if not login_form():
     st.stop()
 
-# 4. DATA & KAMUS
+#  DATA & KAMUS
 TERJEMAHAN_PENYAKIT = {
     'dengue': 'Demam Berdarah (Dengue)', 'typhoid': 'Tipes (Typhoid)', 'tuberculosis': 'TBC (Tuberculosis)',
     'common cold': 'Flu Biasa (Common Cold)', 'pneumonia': 'Paru-paru Basah (Pneumonia)', 'gerd': 'Asam Lambung (GERD)',
@@ -49,7 +47,7 @@ rules, available_diseases = load_rules_from_csv('data.zip')
 all_symptoms = sorted(list(set().union(*rules.values())))
 
 # 5. UI
-st.title("🩺 Diagnosa Penyakit")
+st.title(" Diagnosa Penyakit")
 selected_symptoms_raw = st.multiselect("1. Pilih gejala:", options=all_symptoms, format_func=format_nama_gejala)
 
 cf_user_options = {
