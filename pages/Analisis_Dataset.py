@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from auth_helper import login_form, logout_button
-st.set_page_config(page_title="Analisis Dataset", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Analisis Dataset", layout="wide")
 # Cek login, jika gagal maka stop eksekusi halaman
 if not login_form():
     st.stop()
