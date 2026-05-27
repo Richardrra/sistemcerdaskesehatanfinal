@@ -3,11 +3,11 @@ import pandas as pd
 
 from auth_helper import login_form, logout_button
 
-st.set_page_config(page_title="Kamus Penyakit", page_icon="📖", layout="wide")
+st.set_page_config(page_title="Kamus Penyakit", layout="wide")
 # Cek login, jika gagal maka stop eksekusi halaman
 if not login_form():
     st.stop()
-# 1. INJEKSI CSS CUSTOM (Gaya VR-Real)
+# css
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
@@ -24,7 +24,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# KAMUS TERJEMAHAN PENYAKIT
+# KAMUS 
 TERJEMAHAN_PENYAKIT = {
     'dengue': 'Demam Berdarah (Dengue)',
     'typhoid': 'Tipes (Typhoid)',
@@ -40,7 +40,7 @@ TERJEMAHAN_PENYAKIT = {
     'diabetes': 'Diabetes (Kencing Manis)'
 }
 
-# KAMUS TERJEMAHAN GEJALA (Sama dengan Diagnosa.py)
+# KAMUS TERJEMAHAN GEJALA 
 TERJEMAHAN_GEJALA = {
     'chills': 'Menggigil', 'chest tightness': 'Dada Terasa Sesak', 'congestion in chest': 'Dada Terasa Penuh/Sesak',
     'coryza': 'Pilek / Hidung Beringus', 'cough': 'Batuk', 'coughing up sputum': 'Batuk Berdahak',
